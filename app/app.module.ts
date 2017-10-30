@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
+import { mediaItemList } from './media-item-list.component';
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [AppComponent, MediaItemComponent],
+    declarations: [AppComponent, MediaItemComponent, mediaItemList],
     bootstrap: [AppComponent]
 })
 
