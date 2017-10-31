@@ -4,10 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
 import { mediaItemList } from './media-item-list.component';
+import { FavoriteDirective } from './favorite.directive';
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [AppComponent, MediaItemComponent, mediaItemList],
+    declarations: [AppComponent, MediaItemComponent, mediaItemList, FavoriteDirective],
     bootstrap: [AppComponent]
 })
 
