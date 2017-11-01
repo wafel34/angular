@@ -7,6 +7,7 @@ import { Directive, HostBinding, Input, HostListener } from '@angular/core';
 export class FavoriteDirective{
     @HostBinding('class.is-favorite') isFavoirte = true;
     @HostBinding('class.is-favorite-hovering') hovering = false;
+
     @HostListener('mouseenter') onMouseEnter() {
         this.hovering = true;
     }
