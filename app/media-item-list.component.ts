@@ -9,9 +9,14 @@ import { MediaItemService } from './media-item.service';
 })
 
 export class mediaItemList {
+    mediaItems;
+    constructor(private mediaItemService: MediaItemService) {}
 
-    constructor(private mediaItemService: MediaItemService) {
-        this.mediaItems = this.mediaItemService.get();
+    ngOnInit(){
+        this.mediaItems = this.mediaItemService.get()
+            .subscribe((mediaItems) => {
+                this.mediaItems = mediaItems;
+            });
     }
 
     onMediaItemDelete(mediaItem) {
