@@ -1,7 +1,7 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule, HXRBackend } from '@angular/http';
+import { HttpModule, XHRBackend } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -23,7 +23,7 @@ import { MockXHRBackend } from './mock-xhr-backend';
     declarations: [AppComponent, MediaItemComponent, mediaItemList, FavoriteDirective, CategoryListPipe, MediaItemFormComponent],
     providers: [MediaItemService,
         {provide: lookupListToken, useValue: lookupLists},
-        {provide: HXRBackend, useClass: MockXHRBackend}
+        {provide: XHRBackend, useClass: MockXHRBackend}
     ],
     bootstrap: [AppComponent]
 })
